@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'reestablecer',
+    loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
   },
+
 ];
 
 @NgModule({
