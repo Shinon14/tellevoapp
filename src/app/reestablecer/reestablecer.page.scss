@@ -1,0 +1,35 @@
+.logo{
+    margin-top: 20%;
+    img{
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    };
+}
+.form{
+    margin-top: 10%;
+    ion-item{
+        border-radius: 5px;
+        border-color:  lightblue;
+        border-width: 2px;
+        border-style: solid;
+        margin-bottom: .5rem;
+    }  
+}
+.button__recuperar:hover{
+    background-color: #00bcd4;
+    transition: .5s;
+
+}
+
+.button__recuperar{
+    font-size: 1rem;
+    transition: .3s;
+    background-color: #00d4c2;
+    border-radius: .5rem;
+}
+
+.user__input{
+    margin-bottom: 1rem;
+}
