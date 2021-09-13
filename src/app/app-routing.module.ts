@@ -8,12 +8,15 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'reestablecer',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'reestablecer',
     loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
   },
+
+
 
 ];
 
