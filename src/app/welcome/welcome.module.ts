@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ReestablecerPageRoutingModule } from './reestablecer-routing.module';
+import { WelcomePageRoutingModule } from './welcome-routing.module';
 
-import { ReestablecerPage } from './reestablecer.page';
+import { WelcomePage } from './welcome.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReestablecerPageRoutingModule
+    WelcomePageRoutingModule
   ],
-  declarations: [ReestablecerPage]
+  declarations: [WelcomePage]
 })
-export class ReestablecerPageModule {}
+export class WelcomePageModule {}

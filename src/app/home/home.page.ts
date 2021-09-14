@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { ReestablecerPage } from '../reestablecer/reestablecer.page';
-import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,9 +8,20 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController ) { }
+  constructor(private menu: MenuController) { }
   
-  otraPagina() {
-    this.navCtrl.push(ReestablecerPage);
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
+
+  openEnd() {
+    this.menu.open('end');
+  }
+
+  openCustom() {
+    this.menu.enable(true, 'custom');
+    this.menu.open('custom');
+  }
+
 }
