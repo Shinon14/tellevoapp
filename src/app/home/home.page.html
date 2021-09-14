@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
       Bienvenido
@@ -10,14 +10,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="arrow-forward-circle"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="start">
-      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
   <ion-grid>
     <ion-row>
       <ion-col size="12" >
@@ -31,7 +23,7 @@
             </ion-avatar>
             <ion-item>
               <ion-label>Personas:</ion-label>
-              <ion-input  min="1"type="number" id="input"  max="4" ></ion-input>
+              <ion-input  min="1" type="number" id="input"  max="4" ></ion-input>
     
   
             </ion-item>
@@ -40,29 +32,32 @@
               <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
             </ion-item>
             <ion-item>
-              <ion-select></ion-select>
+                <ion-label>Tarifas</ion-label>
+                <ion-select placeholder="Select One">
+                <ion-select-option value="1">1 persona: {{getTotal(2400, 1)}}</ion-select-option>
+                <ion-select-option value="2">2 persona: {{getTotal(2400, 2)}}</ion-select-option>
+                <ion-select-option value="3">3 persona: {{getTotal(2400, 3)}}</ion-select-option>
+                <ion-select-option value="4">4 persona {{getTotal(2400,4)}}</ion-select-option>
+                </ion-select>
             </ion-item>
           </ion-card-content>
         </ion-card>
       </ion-col>
       <ion-col>
-     <ion-buttons >
-       <ion-button (click)="getTotal(2)">
-          asdasd
-       </ion-button>
-     </ion-buttons>
+
       </ion-col>
     </ion-row>
     
   </ion-grid>
-  
+ 
+ 
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <ion-item>
       <ion-thumbnail slot="start">
         <img src="../../assets/icon/ddddd.png">
-        <ion-title>TeLlevoAPP</ion-title>
+        <ion-title>test</ion-title>
       </ion-thumbnail>
     </ion-item>
   </ion-toolbar>

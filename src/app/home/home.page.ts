@@ -1,7 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { ViewController } from '@ionic/core';
-
+import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +10,11 @@ export class HomePage {
   constructor(){
 
   }
-  getTotal(precio){
-   var total = precio * 2400
+  getTotal(precio, persona){
+   var total = precio * persona
    console.log(total)
-   return precio
+   return total
   }
   
 }
+  
