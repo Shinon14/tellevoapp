@@ -34,13 +34,23 @@
             </ion-item>
             <ion-item>
                 <ion-label>Tarifas</ion-label>
-                <ion-select placeholder="Select One">
+                <ion-select placeholder="Selecciona">
                 <ion-select-option value="1">1 persona: {{getTotal(2400, 1)}}</ion-select-option>
                 <ion-select-option value="2">2 persona: {{getTotal(2400, 2)}}</ion-select-option>
                 <ion-select-option value="3">3 persona: {{getTotal(2400, 3)}}</ion-select-option>
                 <ion-select-option value="4">4 persona {{getTotal(2400,4)}}</ion-select-option>
                 </ion-select>
             </ion-item>
+            <ion-list>
+              <ion-item>
+                <ion-label>Vehiculo</ion-label>
+                <ion-select cancelText="Cancelar" okText="Confirmado">
+                  <ion-select-option value="sedan"> Sedan</ion-select-option>
+                  <ion-select-option value="suv">Suv</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <ion-button type="submit" color="dark" expand="full" fill="clear">Buscar</ion-button>
+            </ion-list>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -56,7 +66,7 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Te llevo app</ion-title>
+    <ion-title>TeLlevoApp</ion-title>
     <ion-avatar slot="start">
       <img src="../../assets/icon/ddddd.png">
     </ion-avatar>
