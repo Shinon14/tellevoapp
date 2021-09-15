@@ -15,4 +15,7 @@ export class ReestablecerPage implements OnInit {
   dissmiss() {
     this.modalController.dismiss();
   }
+  reecuperar() {
+    this.modalController.dismiss();
+  }
 }

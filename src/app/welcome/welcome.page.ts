@@ -10,8 +10,9 @@ import { ReestablecerPage } from '../reestablecer/reestablecer.page';
 })
 export class WelcomePage implements OnInit {
 
+
   constructor(
-  public modalController: ModalController,
+    public modalController: ModalController,
 
   ) { }
 
@@ -53,4 +54,6 @@ export class WelcomePage implements OnInit {
     return await modal.present();
   }
 
+
+   
 }

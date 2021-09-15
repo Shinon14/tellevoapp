@@ -13,7 +13,9 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-
+  login() {
+    this.modalCtrl.dismiss();
+  }
   async dissmiss() {
     await this.modalCtrl.dismiss();
   }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -8,8 +7,14 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
  
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController,) { }
 
+  user = {
+    nombre: ' Fernando',
+    usuario: '',
+    contrasena: '',
+    apellido: '',
+  }
   openFirst() {
     this.menu.enable(true, 'first');
     this.menu.open('first');
