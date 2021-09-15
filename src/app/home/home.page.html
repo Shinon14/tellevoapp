@@ -1,30 +1,63 @@
 <ion-header >
   <ion-toolbar>
     <ion-title>
-      Blank
+      Bienvenido
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-
-
-  <ion-menu class="a1"side="end" type="push" contentId="main">
-    <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-searchbar placeholder="Direccion" showCancelButton="never"></ion-searchbar>
+      </ion-col>
+      <ion-col size="12" >
+        <ion-card>
+          <ion-card-content>
+            <ion-avatar>
+              <img src="../../assets/icon/perfil.png">
+            </ion-avatar>
+            <ion-item>
+              <ion-label  >Cantidad de personas:</ion-label>
+              <ion-input type="number" max="4" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Ingrese hora</ion-label>
+              <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+              
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+     
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
   
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="../../assets/icon/ddddd.png">
+      </ion-thumbnail>
+      <ion-title>TeLlevoAPP</ion-title>
+    </ion-item>
+    
+  </ion-toolbar>
+</ion-footer>
