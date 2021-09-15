@@ -8,18 +8,15 @@
     <ion-content>
       <ion-list>
         <ion-item>
-          <ion-icon name="home-outline" slot="start"></ion-icon>
-          <ion-label>Inicio</ion-label>
+          <ion-icon  [routerLink]="['/welcome']" name="home-outline" slot="start"></ion-icon>
+          <ion-label [routerLink]="['/welcome']" >Inicio</ion-label>
         </ion-item>
         <ion-item>
-          <ion-icon name="home-outline" slot="start"></ion-icon>
-          <ion-label>Registro</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon name="log-out-outline" slot="start"></ion-icon>
-          <ion-label>Cerrar sesion</ion-label>
+          <ion-icon [routerLink]="['/login']" name="log-out-outline" slot="start"></ion-icon>
+          <ion-label [routerLink]="['/login']">Cerrar sesion</ion-label>
         </ion-item>
       </ion-list>
+
     </ion-content>
   </ion-menu>
 

@@ -6,10 +6,9 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-
   {
     path: '',
-    redirectTo: 'welcome',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -29,12 +28,23 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'reestablecer',
-    loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
-  },
+  path: 'welcome',
+  loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+},
+{
+  path: 'login',
+  loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+},
+{
+  path: 'register',
+  loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+},
+{
+  path: 'reestablecer',
+  loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
+},
+
 ];
-
-
 
 @NgModule({
   imports: [
