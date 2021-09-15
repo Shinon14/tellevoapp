@@ -4,7 +4,7 @@
 }
 
 ion-thumbnail > img{
-  border-radius: 30px;
+  border-radius: 40px;
 }
 
 #izq-1{
@@ -15,9 +15,12 @@ ion-thumbnail > img{
   display: flex;
   justify-content: center;
   height: 20px;
+  margin-bottom: 3em;
 }
 
-
+ion-card-content{
+  
+}
 #perfil-e{
   margin-top: 2em;
 }
