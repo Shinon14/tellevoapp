@@ -7,9 +7,23 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(){
+ 
+  constructor(private menu: MenuController) { }
 
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
+
+  openEnd() {
+    this.menu.open('end');
+  }
+
+  openCustom() {
+    this.menu.enable(true, 'custom');
+    this.menu.open('custom');
+  }
+  
   getTotal(precio, persona){
    var total = precio * persona
    console.log(total)
