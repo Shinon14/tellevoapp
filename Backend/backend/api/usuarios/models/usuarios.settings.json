@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "users_app",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "string"
+    },
+    "passUser": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "nombreCompleto": {
+      "type": "string"
+    },
+    "conductor": {
+      "type": "boolean"
+    }
+  }
+}
