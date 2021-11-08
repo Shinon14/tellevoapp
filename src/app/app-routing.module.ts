@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'welcome',
+    redirectTo: 'maps',
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,11 @@ const routes: Routes = [
   path: 'reestablecer',
   loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
 },
+  {
+    path: 'maps',
+    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
+  },
+
 
 ];
 
