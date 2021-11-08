@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { LoadingController, ModalController, Platform } from '@ionic/angular';
 import { Environment, GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsAnimation, GoogleMapsEvent, MyLocation } from '@ionic-native/google-maps';
+
+declare let google:any;
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.page.html',
@@ -10,8 +12,13 @@ export class MapsPage implements OnInit {
   @ViewChild('map', {static:true}) mapElement:any;
   private loading: any;
   private map: GoogleMap;
+  public search: string = '';
+  private googleAutocomplete = new google.maps.places.AutocompleteService();
+  public searchResults = new Array<any>();
   constructor( private platform: Platform,
-    private loadingCtrl: LoadingController) { }
+              private loadingCtrl: LoadingController,  
+              private ngZone: NgZone
+  ){}
 
   ngOnInit() {
     this.mapElement = this.mapElement.nativeElement;
@@ -64,6 +71,20 @@ export class MapsPage implements OnInit {
       this.loading.dismiss();
     }
   
+  }
+
+  searchChanged(){
+    if(!this.search.trim().length) return;
+    this.googleAutocomplete.getPlacePredictions({ input: this.search }, predictions =>{
+      this.ngZone.run(() =>{
+        this.searchResults = predictions;
+      }); 
+    });
+  }
+
+  calcRoute(item:any){
+    this.search = '';
+    console.log(item);
   }
 }
 
