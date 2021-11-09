@@ -8,7 +8,8 @@ import { ApiService } from '../services/api.service';
 })
 export class ConductorPage implements OnInit {
 
-  users: any=[];
+  users: any = [];
+  precios: any = [];
 
 
 
@@ -22,6 +23,14 @@ export class ConductorPage implements OnInit {
     this.api.getConductor().subscribe(
       (res) => {
         this.users = res
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
+    this.api.getPrecios().subscribe(
+      (res) => {
+        this.precios = res
       },
       (err) => {
         console.log(err);

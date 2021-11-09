@@ -61,6 +61,11 @@ export class ApiService {
   getHistorial() {
     return this.http.get(this.apiHistorial)
   }
+  createHistorial(user: string, passUser: string, nombreCompleto: string, email:string) {
+    return this.http.post(this.apiHistorial, {
+      user, passUser, nombreCompleto, email
+    })
+  }
 
   // estas seran las functions para el GET y POST de conductores
   getConductor() {
