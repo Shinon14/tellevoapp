@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { ApiService} from '../services/api.service'
+import { ApiService, userMain } from '../services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -8,22 +8,13 @@ import { ApiService} from '../services/api.service'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
- 
-  users: any = []
+
+  users: any =[]
   precios: any = []
   tipoVehiculo: any = []
 
   constructor(private menu: MenuController, private apiServices:ApiService) { }
 
-
-
-
-  user = {
-    nombre: ' Fernando',
-    usuario: '',
-    contrasena: '',
-    apellido: '',
-  }
   openFirst() {
     this.menu.enable(true, 'first');
     this.menu.open('first');

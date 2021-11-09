@@ -12,9 +12,11 @@
       <ion-input placeholder="Nombre Completo" class="primary-input" #nombreCompleto></ion-input>
     <ion-input placeholder="Usuario" class="primary-input" #user></ion-input>
     <ion-input placeholder="Contraseña" type="password" class="primary-input" #passUser></ion-input>
+    <ion-input placeholder="Correo" class="primary-input" #email></ion-input>
+
     
     <p>Registrandote estas aceptando nuestros Terminos y Condiciones</p>
     <div class="ion-margin-top">
-      <ion-button expand="block" color="primary" class="ion-margin-top" (click)="saveUser(user, passUser, user)" >Registrarse</ion-button>
+      <ion-button expand="block" color="primary" class="ion-margin-top" (click)="saveUser(user, passUser, nombreCompleto, email)" >Registrarse</ion-button>
     </div>
 </ion-content>

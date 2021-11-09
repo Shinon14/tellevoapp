@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>historial</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let hist of history">
+    <ion-card-header>
+      <ion-avatar>
+        <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg">
+      </ion-avatar>
+      <ion-card-title>{{hist.recorrido}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-subtitle>Tu conductor: </ion-card-subtitle>
+      <ion-card-title>{{hist.conductor}}:</ion-card-title>
+      <ion-card-subtitle>Pasajeros: {{hist.cantPasajero}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

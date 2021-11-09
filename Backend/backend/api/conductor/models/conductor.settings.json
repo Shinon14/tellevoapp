@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conductors",
+  "info": {
+    "name": "conductor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreConductor": {
+      "type": "string"
+    },
+    "vehiculo": {
+      "model": "vehiculos"
+    },
+    "usuarioConductor": {
+      "type": "string"
+    },
+    "passConductor": {
+      "type": "string"
+    }
+  }
+}

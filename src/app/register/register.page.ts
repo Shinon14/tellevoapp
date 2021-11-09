@@ -31,8 +31,8 @@ export class RegisterPage implements OnInit {
     })
   }
 
-  saveUser(user, passUser, nombreCompleto) {
-    this.apiService.createUser(user.value, passUser.value, nombreCompleto.value).subscribe(
+  saveUser(user, passUser, nombreCompleto, email) {
+    this.apiService.createUser(user.value, passUser.value, nombreCompleto.value, email.value).subscribe(
       (res) => {
         console.log(res);
       }
