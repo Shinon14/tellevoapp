@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'welcome',
+    redirectTo: 'historial',
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,15 @@ const routes: Routes = [
   path: 'reestablecer',
   loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
 },
+  {
+    path: 'historial',
+    loadChildren: () => import('./historial/historial.module').then( m => m.HistorialPageModule)
+  },  {
+    path: 'conductor',
+    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
+
+
 
 ];
 

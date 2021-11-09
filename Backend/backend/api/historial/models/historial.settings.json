@@ -12,17 +12,29 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "precio_cobrado": {
+    "precioCobrado": {
       "type": "integer"
     },
     "conductor": {
       "type": "string"
     },
-    "cant_pasajeros": {
+    "cantPasajero": {
       "type": "integer"
     },
     "recorrido": {
       "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

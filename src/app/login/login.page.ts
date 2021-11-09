@@ -5,12 +5,19 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+  
 export class LoginPage implements OnInit {
 
   constructor(
     public modalCtrl: ModalController,
   ) { }
 
+
+
+
+  loginUser() {
+    
+  }
   ngOnInit() {
   }
   login() {
