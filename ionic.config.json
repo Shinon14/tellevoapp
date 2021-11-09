@@ -1,5 +1,7 @@
 {
   "name": "prueba_programacion_movil",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

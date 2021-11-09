@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { LoadingController, ModalController, Platform } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 import { RegisterPage } from '../register/register.page';
 import { ReestablecerPage } from '../reestablecer/reestablecer.page';
@@ -9,15 +9,16 @@ import { ReestablecerPage } from '../reestablecer/reestablecer.page';
   styleUrls: ['./welcome.page.scss'],
 })
 export class WelcomePage implements OnInit {
-
-
+ 
   constructor(
     public modalController: ModalController,
 
-  ) { }
 
+  ) { }
   ngOnInit() {
+ 
   }
+
 
 
   async login() {
