@@ -12,14 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "precioCobrado": {
-      "type": "integer"
-    },
     "conductor": {
       "type": "string"
-    },
-    "cantPasajero": {
-      "type": "integer"
     },
     "recorrido": {
       "type": "string"
@@ -35,6 +29,12 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "precioCobrado": {
+      "type": "string"
+    },
+    "cantPasajero": {
+      "type": "string"
     }
   }
 }

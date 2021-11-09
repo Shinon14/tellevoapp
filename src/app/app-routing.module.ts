@@ -46,15 +46,8 @@ const routes: Routes = [
 {
   path: 'register',
   loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-},
-{
-  path: 'reestablecer',
-  loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
-},
-  {
-    path: 'maps',
-    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
-  },
+}
+
 
 
 ];

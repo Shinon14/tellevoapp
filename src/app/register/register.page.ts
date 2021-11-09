@@ -8,19 +8,18 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
+  constructor(
+    private modalCtrl: ModalController,
+    private apiService: ApiService
+  ) {}
 
-  constructor(private modalCtrl: ModalController, private apiService: ApiService) { }
-
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
   async dissmiss() {
     await this.modalCtrl.dismiss();
   }
 
-  registrar() {
-  }
-  
+  registrar() {}
+
   async homer() {
     const modal = await this.modalCtrl.create({
       component: LoginPage,
@@ -28,16 +27,15 @@ export class RegisterPage implements OnInit {
       mode: 'ios',
       backdropDismiss: false,
       cssClass: 'login-modal',
-    })
+    });
   }
 
   saveUser(user, passUser, nombreCompleto, email) {
-    this.apiService.createUser(user.value, passUser.value, nombreCompleto.value, email.value).subscribe(
-      (res) => {
+    this.apiService
+      .createUser(user.value, passUser.value, nombreCompleto.value, email.value)
+      .subscribe((res) => {
         console.log(res);
-      }
-    )
+      });
     // this.modalCtrl.dismiss();
-
   }
 }

@@ -1,6 +1,7 @@
 #textorandom {
-    display: flex;
-    justify-content: center;
+    width: 50%;
+    height: 50%;
+
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 2rem;
@@ -23,10 +24,19 @@ ion-avatar {
 }
 
 .label {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
 }
 .input{
-    display: flex;
-    justify-content: space-evenly;
+    margin-bottom: -1rem;
+    position: relative;
+    bottom: -1rem;
 }
+.input2{
+
+    position: relative;
+    bottom: -0.4rem;
+}
+
