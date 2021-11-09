@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "historial",
+  "info": {
+    "name": "historial",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "precio_cobrado": {
+      "type": "integer"
+    },
+    "conductor": {
+      "type": "string"
+    },
+    "cant_pasajeros": {
+      "type": "integer"
+    },
+    "recorrido": {
+      "type": "string"
+    }
+  }
+}

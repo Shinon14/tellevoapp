@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehiculos",
+  "info": {
+    "name": "vehiculos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipoVehiculo": {
+      "type": "string"
+    },
+    "marcaVehiculo": {
+      "type": "string"
+    }
+  }
+}

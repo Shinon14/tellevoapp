@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "precios",
+  "info": {
+    "name": "precio",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "precio": {
+      "type": "integer"
+    },
+    "numeroPasajero": {
+      "type": "integer"
+    }
+  }
+}
