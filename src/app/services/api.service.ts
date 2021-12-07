@@ -9,7 +9,12 @@ export interface userMain{
   nombreCompleto: string;
   }
 
-
+export interface Hist{
+  precioCobrado: string,
+  conductor: string,
+  cantPasajero: string,
+  recorrido: string,
+  }
 
 @Injectable({
   providedIn: 'root'
@@ -61,6 +66,13 @@ export class ApiService {
   getHistorial() {
     return this.http.get(this.apiHistorial)
   }
+  
+  createHistorial(precioCobrado: string, conductor: string, cantPasajero: string, recorrido: string) {
+    return this.http.post(this.apiHistorial, {
+      precioCobrado, conductor, cantPasajero, recorrido
+    })
+    
+  }
 
   // estas seran las functions para el GET y POST de conductores
   getConductor() {
@@ -69,10 +81,19 @@ export class ApiService {
   updateConductor() {
     
   }
+
   createConductor(user: string, passUser: string, nombreCompleto: string, email: string) {
     return this.http.post(this.apiConductor, {
       user, passUser, nombreCompleto, email
     })
+  }
+
+
+  // estas seran las functions para el GET y POST de imagenes random para los perfiles
+
+
+  getImagenes() {
+    return this.http.get('https://source.unsplash.com/random')
   }
 
 }

@@ -6,7 +6,7 @@
   <ion-header >
     <ion-toolbar>
       <ion-title>
-        Bienvenido
+        Bienvenido conductor
       </ion-title>
       <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -18,40 +18,52 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12" >
-          <ion-searchbar placeholder="Direccion" showCancelButton="never"></ion-searchbar>
-        </ion-col>
-        <ion-col size="12" >
           <ion-card *ngFor="let user of users">
             <ion-card-content >
               <ion-avatar>
-                <img src="../../assets/icon/perfil.png">
+                <img src="https://images.pexels.com/photos/4350287/pexels-photo-4350287.jpeg">
               </ion-avatar>
-              <ion-label id="textorandom">Bienvenido {{user.nombreConductor}}</ion-label>
+              <ion-input id="textorandom" placeholder="Ingrese nombre conductor"#conductor>
+              </ion-input>
               <ion-item >
-                <ion-label>Pasajeros</ion-label>
-                <ion-select placeholder="Selecciona" >
-                <ion-select-option *ngFor="let pre of precios">{{pre.numeroPasajero}} </ion-select-option>
-                </ion-select>
-            </ion-item>
+                <ion-grid>
+                  <ion-row class="label">
+                    <ion-label class="input">Nro. Pasajero: </ion-label>
+                    <ion-input  class="input2" placeholder="Ingresa..."#cantPasajero></ion-input>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
               <ion-item>
                 <ion-label id="izq-1">Ingrese hora</ion-label>
                 <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
               </ion-item>
-              <ion-item >
-                  <ion-label>Tarifas</ion-label>
-                  <ion-select placeholder="Selecciona" >
-                  <ion-select-option *ngFor="let pre of precios">{{pre.precio}}</ion-select-option>
-                  </ion-select>
+              <ion-item>
+                <ion-grid>
+                  <ion-row class="label">
+                    <ion-label>Tipo de vehiculo:</ion-label>
+                    <ion-label>{{user.vehiculo.tipoVehiculo}}</ion-label>
+                  </ion-row>
+                </ion-grid>
               </ion-item>
+              <ion-item >
+                <ion-grid>
+                  <ion-row class="label">
+                    <ion-label class="input">Tarifa: </ion-label>
+                    <ion-input  class="input2" placeholder="Ingresa..." #precioCobrado></ion-input>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+
                 <ion-item>
-                  <ion-label>Vehiculo</ion-label>
-                  <ion-select cancelText="Cancelar" okText="Confirmado">
-                    <ion-select-option *ngFor="let tipo of tipoVehiculo">{{tipo.tipoVehiculo}}</ion-select-option>
-                  </ion-select>
+                  <ion-input placeholder="Destino viaje" #recorrido></ion-input>
+                  <!-- <ion-input placeholder="Destino viaje"#cantPasajero></ion-input>
+                  <ion-input placeholder="Destino viaje"#conductor></ion-input>
+                  <ion-input placeholder="Destino viaje"#precioCobrado></ion-input> -->
+
                 </ion-item>
                 <ion-grid>
                   <ion-row>
-                    <ion-button type="submit" color="success" expand="full">Buscar</ion-button>
+                    <ion-button type="submit" color="success" expand="full" (click)="saveHistorial(precioCobrado, conductor, cantPasajero, recorrido)">Generar viaje</ion-button>
                   </ion-row>
                 </ion-grid>
               </ion-card-content>

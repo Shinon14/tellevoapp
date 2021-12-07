@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'maps',
+    redirectTo: 'conductor',
     pathMatch: 'full'
   },
   {
@@ -28,12 +28,31 @@ const routes: Routes = [
   loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
 },
   {
-    path: 'maps',
-    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
+    path: 'historial',
+    loadChildren: () => import('./historial/historial.module').then( m => m.HistorialPageModule)
   },
+  {
+    path: 'conductor',
+    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
+  {
+  path: 'welcome',
+  loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+},
+{
+  path: 'login',
+  loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+},
+{
+  path: 'register',
+  loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+}
+
 
 
 ];
+
+
 
 
 
